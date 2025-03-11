@@ -3,23 +3,20 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Project/Weapon/RangedWeapon/RangedWeapon.h"
+#include "Project/Weapon/RangedWeapon/ThrowableWeapon/ThrowableWeapon.h"
 #include "Grenade.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class PROJECT_API AGrenade : public ARangedWeapon
+class PROJECT_API AGrenade : public AThrowableWeapon
 {
 	GENERATED_BODY()
 	
-public:
-	virtual void AttackInitiated() override;
-	virtual void AttackStopped() override;
-
 private:
 	class AShooterCharacter* Character;
-	UFUNCTION(BlueprintCallable)
+
+	virtual void ThrowWeapon() override;
 	void FireGrenade();
 };

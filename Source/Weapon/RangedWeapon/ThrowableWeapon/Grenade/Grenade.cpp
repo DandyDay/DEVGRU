@@ -6,20 +6,14 @@
 
 #include "Engine/SkeletalMeshSocket.h"
 
-void AGrenade::AttackInitiated()
+void AGrenade::ThrowWeapon()
 {
-	Super::AttackInitiated();
-}
-
-void AGrenade::AttackStopped()
-{
-	Super::AttackStopped();
+	if (!HasAuthority()) return;
+	FireGrenade();
 }
 
 void AGrenade::FireGrenade()
 {
-	if (!HasAuthority()) return;
-	
 	APawn* InstigatorPawn = Cast<APawn>(GetOwner());
 	const USkeletalMeshSocket* MuzzleFlashSocket = GetWeaponMesh()->GetSocketByName(FName("MuzzleFlash"));
 	if (MuzzleFlashSocket)
