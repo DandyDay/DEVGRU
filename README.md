@@ -15,7 +15,7 @@
 
 ---
 
-## 🏃 프로젝트 개요
+## 🎮 프로젝트 개요
 
 **DEVGRU**는 군사 기지에서 상대 팀을 섬멸하는 것을 목표로 하는 FPS(1인칭 슈팅) 장르의 게임입니다.  
 - **개발 기간:** 2024.07.14 - 2024.09.23  
@@ -82,7 +82,7 @@ void AShooterCharacter::HandleCharacterState()
   - RangedWeapon (원거리 무기)
     - FirearmWeapon (총기)
       - Rifle: 발사체(Projectile) 방식으로 구현
-      - Pistol: 라인트레이스(Line Trace)를 통한 히트스캔 방식
+     현
     - ThrowableWeapon (투척 무기)
       - Grenade: ThrowWeapon() 호출 시 FireGrenade()로 수류탄 발사
   - MeleeWeapon (근접 무기): 미구현 상태
