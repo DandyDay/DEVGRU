@@ -49,7 +49,9 @@
 - 다른 컴포넌트와의 상호작용이 필요한 경우, `CharacterState` 변수를 통해 정보 전달.  
 - 네트워크 최적화를 위해 `CharacterState` 변수만 Replicate하여 부하 최소화.  
 
-![ComponentUML](https://github.com/user-attachments/assets/19576615-c458-4571-b9f9-a32e75051327)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/19576615-c458-4571-b9f9-a32e75051327" alt="ComponentUML" style="width: 70%"/>
+</p>
 
 🔹 **예시:**  
 ```cpp
@@ -87,7 +89,10 @@ void AShooterCharacter::HandleCharacterState()
       - Grenade: ThrowWeapon() 호출 시 FireGrenade()로 수류탄 발사
   - MeleeWeapon (근접 무기): 미구현 상태
 
-![WeaponUML](https://github.com/user-attachments/assets/cefff2ba-6e38-46a0-9672-3a76940ecddc)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cefff2ba-6e38-46a0-9672-3a76940ecddc" alt="WeaponUML" style="width: 70%"/>
+</p>
 
 #### 🔹 주요 기능:
 - `FirearmWeapon`: 자동 연사 여부, 탄피 배출, 재장전 애니메이션 지원.
